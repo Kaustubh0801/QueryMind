@@ -4,7 +4,7 @@ setup(
     name = 'QueryMind',
     version= '0.0.0',
     author= 'Kaustubh Agrawal',
-    author_email= 'kasutubhagr080@gmail.com',
+    author_email= 'kaustubhagr080@gmail.com',
     packages= find_packages(),
     install_requires = []
 
