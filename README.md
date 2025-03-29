@@ -10,57 +10,58 @@ QueryMind is an interactive AI-powered chatbot designed to extract information f
 - Engage in contextual conversations using an AI model
 - User-friendly interface built with Streamlit
 
+---
+
 ## Installation
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Kaustubh0801/QueryMind.git
-   cd QueryMind
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Kaustubh0801/QueryMind.git
+cd QueryMind
+```
 
-2.**Create a Virtual Environment (Recommended)**
+### 2. Create a Virtual Environment (Recommended)
+```bash
 python -m venv venv
+# Activate the virtual environment
 source venv/bin/activate  # On macOS/Linux
 venv\Scripts\activate     # On Windows
+```
 
-3.Install Dependencies
-
-bash
-Copy
-Edit
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-Set Up the Gemini API Key
+```
 
-Obtain an API key from Google AI Studio
+### 4. Set Up the Gemini API Key
+- Obtain an API key from [Google AI Studio](https://aistudio.google.com)
+- Create a `.env` file in the root directory and add:
+  ```ini
+  GEMINI_API_KEY=your_api_key_here
+  ```
 
-Create a .env file in the root directory and add:
+---
 
-ini
-Copy
-Edit
-GEMINI_API_KEY=your_api_key_here
-Usage
-Run the Application
+## Usage
 
-bash
-Copy
-Edit
+### 1. Run the Application
+```bash
 streamlit run app.py
-Upload PDFs
+```
 
-Use the sidebar to upload one or multiple PDF files.
+### 2. Upload PDFs
+- Use the sidebar to upload one or multiple PDF files.
+- Click on the "Process PDFs" button to extract text and store vector embeddings.
 
-Click on the "Process PDFs" button to extract text and store vector embeddings.
+### 3. Ask Questions
+- Type your question in the text box.
+- QueryMind will retrieve relevant information from the processed documents and provide responses.
 
-Ask Questions
+---
 
-Type your question in the text box.
+## Project Structure
 
-QueryMind will retrieve relevant information from the processed documents and provide responses.
-
-Project Structure
-bash
-Copy
-Edit
+```
 QueryMind/
 │── src/
 │   ├── __init__.py
@@ -71,23 +72,32 @@ QueryMind/
 │── .gitignore              # Ignored files for Git
 │── README.md               # Project documentation
 │── LICENSE                 # License information
-Dependencies
-streamlit
+```
 
-PyMuPDF (for PDF processing)
+---
 
-sentence-transformers (for text embeddings)
+## Dependencies
 
-google-generativeai (Gemini API)
+The following dependencies are required for running QueryMind:
 
-python-dotenv (for environment variables)
+- `streamlit` (for UI)
+- `PyMuPDF` (for PDF processing)
+- `sentence-transformers` (for text embeddings)
+- `google-generativeai` (for Gemini API integration)
+- `python-dotenv` (for environment variable management)
 
-Install them using:
-
-
-bash
-Copy
-Edit
+To install all dependencies, run:
+```bash
 pip install -r requirements.txt
+```
+
+---
+
+
+## License
+
+This project is licensed under the MIT License.
+
+---
 
 
